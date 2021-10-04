@@ -1,0 +1,65 @@
+		<mat-card>
+            <img class="logo" src="assets/img/kalyon_pv.svg" alt="logo">
+            <h2>Kayıt Oluşturun</h2>
+			<form [formGroup]="registerForm" #formDirective="ngForm" 
+  (ngSubmit)="registerForm.valid && onSubmit(registerForm, formDirective)">
+
+				
+				<div>
+					<mat-form-field class="example-full-width">
+						<mat-icon matPrefix>person_outline</mat-icon>
+					<input autofocus type="text" matInput placeholder="Ad" formControlName="firstname">
+					</mat-form-field>
+				  
+					<mat-form-field class="example-full-width">
+						<mat-icon matPrefix>person_outline</mat-icon>
+						<input autofocus type="text" matInput placeholder="Soyad" formControlName="lastname">
+					</mat-form-field>
+				  </div>
+
+
+				<mat-form-field>
+					<mat-icon matPrefix>email</mat-icon>
+					<input autofocus type="email" matInput placeholder="Email *" formControlName="email">
+					<mat-error *ngIf="checkValidation('email')">
+						{{ emailErrors() }}
+          
+					</mat-error>
+				</mat-form-field>
+
+                <mat-form-field>
+					<mat-icon matPrefix>credit_card</mat-icon>
+					<input autofocus type="text" matInput placeholder="Sicil numarası *" formControlName="empcode">
+					<mat-error *ngIf="checkValidation('empcode')">
+						{{ fieldRequired }}
+					</mat-error>
+				</mat-form-field>
+
+				<mat-form-field>
+					<mat-icon matPrefix>person_outline</mat-icon>
+					<input autofocus type="text" matInput placeholder="Kullanıcı adı *" formControlName="username">
+					<mat-error *ngIf="checkValidation('username')">
+						{{ fieldRequired }}
+					</mat-error>
+				</mat-form-field>
+
+
+				<mat-form-field>
+					<mat-icon matPrefix>lock_outline</mat-icon>
+					<input type="password" autocomplete="false" matInput placeholder="Şifre *" formControlName="password">
+          <mat-hint>En az 8 karakterden, büyük, küçük ve sayı içeren şifre oluşturunuz</mat-hint>
+      <mat-error *ngIf="checkValidation('password')">
+        {{ getErrorPassword() }}
+      </mat-error>
+				</mat-form-field>
+
+
+
+                <div mat-raised-button color="warn" class="btn">
+                <button mat-raised-button  color="primary">Kayıt</button>
+            </div>
+                <div class="link">
+                  <a routerLink ="/login" routerLinkActive="active"><mat-hint>Giriş sayfasına git</mat-hint></a>
+                </div>
+                </form>
+                </mat-card>

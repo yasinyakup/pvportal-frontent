@@ -1,0 +1,49 @@
+mat-card {
+    max-width: 300px;
+    height: 310px;
+    margin: auto ;
+    top: 10em;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5) !important;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+
+
+ a {
+   margin-left: 2em;
+ }
+
+ .link {
+  padding-top: 1em;
+ }
+
+ .btn{
+  margin: auto;
+  }
+  button{
+    width: 10em;
+  }
+
+  .logo{
+    width: 200px;
+  }
+
+  .fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+  

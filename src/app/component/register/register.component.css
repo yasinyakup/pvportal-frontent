@@ -1,0 +1,32 @@
+mat-card {
+    max-width: 400px;
+    height: 550px;
+    margin: auto ;
+    top: 5em;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5) !important;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+
+
+ a {
+   margin-left: 2em;
+ }
+
+ .link {
+  padding-top: 0.5em;
+ }
+
+ .btn{
+     padding-top: 1em;
+     margin: auto;
+ }
+ button{
+     width: 10em;
+ }
+ .logo{
+   width: 200px;
+ }
